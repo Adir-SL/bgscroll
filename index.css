@@ -1,26 +1,28 @@
-* {
+html, body {
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  height: 100%;
 }
 
-html, body {
-  height: 100%;
+html {
+  /* Split gradient so top overscroll shows header color, bottom shows footer color */
+  background: linear-gradient(to bottom, #ff6b6b 50%, #4dabf7 50%);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  /* use dvh for more reliable mobile viewport height if you want */
   min-height: 100dvh;
 }
 
 header {
-  background-color: beige;
-  padding-top: calc(env(safe-area-inset-top, 20px) + 16px);
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
+  background-color: #ff6b6b;
+  padding: 16px;
+  padding-top: calc(env(safe-area-inset-top) + 16px);
 }
 
 .content {
@@ -29,9 +31,7 @@ header {
 }
 
 footer {
-  background-color: bisque;
-  padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 16px);
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 16px;
+  background-color: #4dabf7;
+  padding: 16px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
 }
