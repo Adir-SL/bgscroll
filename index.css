@@ -1,35 +1,13 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  /* iOS Safari uses body's background for the scroll canvas and overscroll bounce areas.
-     Hard stop at 50%: top half = header color (behind status bar), bottom = footer color (behind tab bar). */
-  background: linear-gradient(to bottom, #ff6b6b 50%, #4dabf7 50%);
-}
-
 header {
-  background-color: #ff6b6b;
-  padding: 16px;
-  padding-top: calc(env(safe-area-inset-top) + 16px);
-}
-
-.content {
-  background-color: #ffffff;
-  flex: 1;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding-top: env(safe-area-inset-top);
+  background: bisque;
 }
 
 footer {
-  background-color: #4dabf7;
-  padding: 16px;
-  padding-bottom: calc(env(safe-area-inset-bottom) + 16px);
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: beige;
 }
