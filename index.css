@@ -1,4 +1,4 @@
-.top {
+.top, .bottom {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,23 +8,15 @@
   background: bisque;
 }
 
-.top::after {
-  content: 'aaa';
-  color: transparent;
-  user-select: none;
-}
-
 .bottom {
-  position: fixed;
+  top: unset;
   bottom: 0;
-  left: 0;
-  right: 0;
   padding-bottom: env(safe-area-inset-bottom);
   background: beige;
 }
 
-.bottom::after {
-  content: 'aaa';
+.top::after, .bottom::after {
+  content: 'a';
   color: transparent;
   user-select: none;
 }
