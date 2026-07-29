@@ -4,11 +4,6 @@ html, body {
   height: 100%;
 }
 
-html {
-  /* Split gradient so top overscroll shows header color, bottom shows footer color */
-  background: linear-gradient(to bottom, #ff6b6b 50%, #4dabf7 50%);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -17,6 +12,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  /* iOS Safari uses body's background for the scroll canvas and overscroll bounce areas.
+     Hard stop at 50%: top half = header color (behind status bar), bottom = footer color (behind tab bar). */
+  background: linear-gradient(to bottom, #ff6b6b 50%, #4dabf7 50%);
 }
 
 header {
