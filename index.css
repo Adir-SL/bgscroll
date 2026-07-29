@@ -1,45 +1,37 @@
-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
 }
 
-body::before,
-  body::after {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-}
-
-body::before {
-  top: 0;
-  height: env(safe-area-inset-top);
-  background: red;
-}
-
-body::after {
-  bottom: 0;
-  height: env(safe-area-inset-bottom);
-  background: blue;
-}
-
-.content {
-  width: 100%;
-  height: 100vh;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* use dvh for more reliable mobile viewport height if you want */
+  min-height: 100dvh;
 }
 
 header {
-  width: 100%;
-  height: 200px;
   background-color: beige;
+  padding-top: calc(env(safe-area-inset-top, 20px) + 16px);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+.content {
+  background-color: #ffffff;
+  flex: 1;
 }
 
 footer {
-  width: 100%;
-  height: 200px;
   background-color: bisque;
+  padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 16px);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
 }
