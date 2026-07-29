@@ -1,4 +1,4 @@
-header {
+/* header {
   position: fixed;
   top: 0; left: 0; right: 0;
   padding-top: env(safe-area-inset-top);
@@ -10,4 +10,29 @@ footer {
   bottom: 0; left: 0; right: 0;
   padding-bottom: env(safe-area-inset-bottom);
   background: beige;
+} */
+
+html {
+  background-color: bisque;
+}
+
+body {
+  background-color: beige;
+}
+
+header {
+  height: 200px;
+  width: 100%;
+  background-color: beige;
+}
+
+.content {
+  height: 100vh;
+  background-color: white;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: bisque;
 }
